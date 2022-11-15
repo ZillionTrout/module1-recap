@@ -1,17 +1,18 @@
 /// Iteration 2: getMaxNum
 
-/* Your code goes here */
+function getMaxNum (getMaxNum) {
+    return Math.max(...getMaxNum.filter(Number));
+}
 
 // Iteration 2 tests:
-// console.log(getMaxNum([45, 67, 12, 34])) // Should return 67
-// console.log(getMaxNum(['hello', [0, 1, 2], 34, 45, 12, 0])) // Should return 45
-
-
+console.log(getMaxNum([45, 67, 12, 34])) // Should return 67
+console.log(getMaxNum(['hello', [0, 1, 2], 34, 45, 12, 0])) // Should return 45
 
 
 /// Iteration 3: changeItem
 
 /* Your code goes here */
+
 
 // Iteration 3 tests:
 // console.log(changeItem([3, 5, 7], 3, 4)) // Should return [4,5,7]
@@ -24,42 +25,62 @@
 /// Iteration 4: orderByDate
 
 /* Your code goes here */
+function orderByDate(birthdayArray) {
+    const birthdays = [...birthdayArray].sort((a,b) => {
+        if (a.year > b.year) return 1;
+        else if (a.year < b.year) return -1;
+        else if (a.title > b.title) return 1;
+        else if (a.title < b.title) return -1;
+        else return 0;
+    });
+    return birthdays;
+}
+function orderByDate(dateArray) {
+    const importantDates = [...dateArray].sort((a,b) => {
+        if (a.year > b.year) return 1;
+        else if (a.year < b.year) return -1;
+        else if (a.title > b.title) return 1;
+        else if (a.title < b.title) return -1;
+        else return 0;
+    });
+    return importantDates;
+}
 
-// Iteration 4 tests:
-// const birthdays = [
-//   {
-//     name: 'Bob',
-//     year: 1989,
-//   },
-//   {
-//     name: 'Rosita',
-//     year: 1990,
-//   },
-//   {
-//     name: 'Stevie',
-//     year: 1988,
-//   },
-//   {
-//     name: 'Marlon',
-//     year: 1979,
-//   },
-// ]
-// const importantDates = [
-//   {
-//     title: 'Wedding aniversary',
-//     year: 2014,
-//   },
-//   {
-//     name: "Daddy's birthday",
-//     year: 2013,
-//   },
-//   {
-//     name: 'Graduation party',
-//     year: 2019,
-//   }
-// ]
-// console.log(orderByDate(birthdays)) // Should return them ordered 1979, 1988, 1989, 1990
-// console.log(orderByDate(importantDates)) // Should return them ordered 2013, 2014, 2019
+
+const birthdays = [
+    {
+    name: 'Bob',
+    year: 1989,
+    },
+    {
+    name: 'Rosita',
+    year: 1990,
+    },
+    {
+    name: 'Stevie',
+    year: 1988,
+    },
+    {
+    name: 'Marlon',
+    year: 1979,
+    },
+]
+const importantDates = [
+    {
+    title: 'Wedding aniversary',
+    year: 2014,
+    },
+    {
+    name: "Daddy's birthday",
+    year: 2013,
+    },
+    {
+    name: 'Graduation party',
+    year: 2019,
+    }
+]
+console.log(orderByDate(birthdays)) // Should return them ordered 1979, 1988, 1989, 1990
+console.log(orderByDate(importantDates)) // Should return them ordered 2013, 2014, 2019
 
 
 
@@ -67,6 +88,20 @@
 /// Iteration 5: new machine gun
 
 /* Your code goes here */
+class Weapon {
+    constructor(type, power, ammo) {
+    this.type = type;
+    this.power = 80;
+    this.ammo = 10;
+    }
+    shoot(){
+    }
+    stopShooting(){
+    }
+    reload (){
+    }
+
+    }
 
 // Iteration 5 tests
 // const machineGun = new Weapon('Machine gun', 90, 50);
