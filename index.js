@@ -12,6 +12,9 @@ console.log(getMaxNum(['hello', [0, 1, 2], 34, 45, 12, 0])) // Should return 45
 /// Iteration 3: changeItem
 
 /* Your code goes here */
+function changeItem ([],num, number) {
+
+}
 
 
 // Iteration 3 tests:
@@ -89,16 +92,25 @@ console.log(orderByDate(importantDates)) // Should return them ordered 2013, 201
 
 /* Your code goes here */
 class Weapon {
-    constructor(type, power, ammo) {
+    constructor(type, power = 80, ammo = 10) {
     this.type = type;
-    this.power = 80;
-    this.ammo = 10;
+    this.power = power;
+    this.ammo = ammo;
+    this.shootingInterval = undefined
     }
     shoot(){
+        this.shootingInterval = setInterval(() => {
+            if (this.ammo > 0){
+                this.ammo = this.ammo - 1;
+                console.log (this.ammo)
+            }
+        }, 300)
     }
     stopShooting(){
+        clearInterval(this.shootingInterval);
     }
-    reload (){
+    reload (num){
+        this.ammo = this.ammo + num;
     }
 
     }
