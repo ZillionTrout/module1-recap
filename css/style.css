@@ -1,3 +1,57 @@
 body {
-    background-color: aquamarine;
+    background-image: url(https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1192&q=80);
+    background-size: 100% auto; 
+}
+
+
+.texto {
+
+    color: #fff;
+    background-color: #000;
+    opacity: .4;
+    border-radius: 15px;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav {
+    width: 600px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.imagen {
+    width: 60px;
+    margin: 5%;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 1rem;
+}
+
+.kimono {
+    height: 600px;
+}
+
+body table {
+    display: flex;
+    justify-content: center;
 }
