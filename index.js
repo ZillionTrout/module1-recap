@@ -12,8 +12,14 @@ console.log(getMaxNum(['hello', [0, 1, 2], 34, 45, 12, 0])) // Should return 45
 /// Iteration 3: changeItem
 
 /* Your code goes here */
-function changeItem ([],num, number) {
 
+function changeItem(arrNum, num1, num2) {
+    arrNum.forEach((elem, i) => {
+    if (elem === num1) {
+        arrNum.splice(i, 1, num2);
+    }
+    });
+    return arrNum;
 }
 
 
